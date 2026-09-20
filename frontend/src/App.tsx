@@ -4,22 +4,41 @@ import { InteractionOverlay } from './components/InteractionOverlay';
 
 function App() {
   return (
-    <div style={{ width: '100vw', height: '100vh', background: '#050505', position: 'relative', overflow: 'hidden' }}>
+    <div style={{ width: '100vw', height: '100vh', background: '#020205', position: 'relative', overflow: 'hidden' }}>
       <Scene />
       <InteractionOverlay />
 
       <div style={{
         position: 'absolute',
-        bottom: '30px',
-        left: '30px',
+        bottom: '40px',
+        left: '40px',
         color: 'white',
-        fontFamily: 'Inter, sans-serif',
+        fontFamily: 'Inter, system-ui, sans-serif',
         pointerEvents: 'none',
-        textShadow: '0 2px 10px rgba(0,0,0,0.5)'
+        textShadow: '0 2px 15px rgba(0,0,0,0.8)',
+        zIndex: 10
       }}>
-        <h1 style={{ margin: 0, fontSize: '32px', fontWeight: '800', letterSpacing: '-1px' }}>AIgency Campus</h1>
-        <p style={{ margin: 0, opacity: 0.6, fontSize: '16px' }}>Autonomous Project Management Ecosystem</p>
-      </div>
+        <h1 style={{
+          margin: 0,
+          fontSize: '42px',
+          fontWeight: '900',
+          letterSpacing: '-2px',
+          background: 'linear-gradient(to right, #fff, #aaa)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent'
+        }}>
+          AIgency Campus
+        </h1>
+        <p style={{
+          margin: 0,
+          opacity: 0.7,
+          fontSize: '18px',
+          fontWeight: '300',
+          letterSpacing: '1px'
+        }}>
+          Autonomous Project Management Ecosystem
+        </p>
+      </div >
     </div>
   );
 }
