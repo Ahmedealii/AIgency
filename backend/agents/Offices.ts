@@ -1,5 +1,5 @@
-import { OfficeAgent } from '../core/OfficeAgent';
-import { AgentResponse } from '../interfaces/types';
+import { OfficeAgent } from '../core/OfficeAgent.js';
+import { AgentResponse } from '../interfaces/types.js';
 
 export class CodingOffice extends OfficeAgent {
   protected agentId = 'CODING_OFFICE';

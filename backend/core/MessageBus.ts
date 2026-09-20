@@ -1,4 +1,4 @@
-import { Message, AgentResponse } from '../interfaces/types';
+import { Message, AgentResponse } from '../interfaces/types.js';
 import { EventEmitter } from 'events';
 
 class MessageBus extends EventEmitter {

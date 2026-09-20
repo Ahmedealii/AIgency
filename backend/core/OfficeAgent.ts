@@ -1,5 +1,5 @@
-import MessageBus from './MessageBus';
-import { Message, AgentResponse } from '../interfaces/types';
+import MessageBus from './MessageBus.js';
+import { Message, AgentResponse } from '../interfaces/types.js';
 
 export abstract class OfficeAgent {
   protected abstract agentId: string;
@@ -7,7 +7,7 @@ export abstract class OfficeAgent {
 
   constructor() {
     setTimeout(() => {
-        MessageBus.listen(this.agentId, (msg) => this.onMessageReceived(msg));
+        MessageBus.listen(this.agentId, (msg: Message) => this.onMessageReceived(msg));
     }, 0);
   }
 

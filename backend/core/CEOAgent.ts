@@ -1,12 +1,12 @@
-import MessageBus from './MessageBus';
-import { OfficeAgent } from './OfficeAgent';
-import { Message, AgentResponse } from '../interfaces/types';
+import MessageBus from './MessageBus.js';
+import { OfficeAgent } from './OfficeAgent.js';
+import { Message, AgentResponse } from '../interfaces/types.js';
 
 class CEOAgent {
   private agentId = 'CEO_OFFICE';
 
   constructor() {
-    MessageBus.listen(this.agentId, (msg) => this.handleUserRequest(msg));
+    MessageBus.listen(this.agentId, (msg: Message) => this.handleUserRequest(msg));
   }
 
   private async handleUserRequest(message: Message): Promise<void> {

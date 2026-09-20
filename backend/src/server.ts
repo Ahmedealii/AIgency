@@ -2,8 +2,8 @@ import express from 'express';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
-import MessageBus from './core/MessageBus';
-import { Message } from './interfaces/types';
+import MessageBus from '../core/MessageBus.js';
+import { Message } from '../interfaces/types.js';
 
 const app = express();
 app.use(cors());
